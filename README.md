@@ -1,6 +1,6 @@
 # Proyecto para el ramo de IA
 ### Milk Collection Problem with Blending usando un enfoque greedy + simulated annealing
-### El informe se incluye en git.
+### El informe se incluye en el git.
  
 
 | Instancia | Z | Tiempo |
