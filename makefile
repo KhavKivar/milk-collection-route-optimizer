@@ -1,8 +1,19 @@
-CC = g++
+CXX ?= g++
+CXXFLAGS ?= -std=c++17 -O2 -Wall -Wextra
+INSTANCE ?= a36.txt
+ITERATIONS ?= 1000
 
-all: MCPwB
-	./MCPwB Instancias-20210102/$(ARGS) 
-	
+.PHONY: all build run clean
+
+all: build
+
+build: MCPwB
 
 MCPwB: MCPwB.cpp
-	$(CC) MCPwB.cpp -o MCPwB
+	$(CXX) $(CXXFLAGS) MCPwB.cpp -o MCPwB
+
+run: MCPwB
+	./MCPwB Instancias-20210102/$(INSTANCE) $(ITERATIONS)
+
+clean:
+	rm -f MCPwB

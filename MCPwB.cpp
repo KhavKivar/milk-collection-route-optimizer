@@ -1024,6 +1024,11 @@ void simulated_aneling(vector<vector<int>> solucion_inicial, int iter){
 
 
 int main(int argc, char *argv[]) {
+    if (argc != 3) {
+        cerr << "Usage: " << argv[0] << " <instance-file> <iterations>" << endl;
+        return 1;
+    }
+
     leer_input(argv[1]);
     int iteraciones = atoi(argv[2]);
     factor_sobrecuota = 0.99;
@@ -1043,4 +1048,3 @@ int main(int argc, char *argv[]) {
     
     
 }
-
